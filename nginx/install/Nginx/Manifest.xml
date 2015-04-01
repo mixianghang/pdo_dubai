@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest version="1.0">
+    <name>Nginx</name>
+    <friendly-name>nginx</friendly-name>
+    <summary><![CDATA[Nginx web server]]></summary>
+    <version>1.0.13.2</version>
+    <catalog>basic-env</catalog>
+    <context>online</context>
+    <vendor>
+        <id>odp</id>
+        <name>ODP</name>
+        <mail>odp@baidu.com</mail>
+    </vendor>
+    <author>
+        <name>Nginx Group</name>
+        <mail>xuliqiang@baidu.com</mail>
+    </author>
+</manifest>

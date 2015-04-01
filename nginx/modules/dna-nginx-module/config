@@ -1,0 +1,6 @@
+ngx_addon_name=ngx_http_dna_module
+HTTP_MODULES="$HTTP_MODULES ngx_http_dna_module"
+NGX_ADDON_SRCS="$NGX_ADDON_SRCS $ngx_addon_dir/src/ngx_dna_module.cpp"
+CORE_INCS="$CORE_INCS $ngx_addon_dir/src/dna/app/wise/ta/adaption/output/include $ngx_addon_dir/src/dna/public/odict/output/include $ngx_addon_dir/src/dna/lib2-64/ullib/include $ngx_addon_dir/src/dna/lib2-64/others-ex/include $ngx_addon_dir/src/dna/lib2-64/dict/include"
+CORE_LIBS="$CORE_LIBS -lcrypto -lm -L$ngx_addon_dir/src/dna/app/wise/ta/adaption/output -ladaption -L$ngx_addon_dir/src/dna/public/odict/output -lodict -L$ngx_addon_dir/src/dna/lib2-64/ullib/lib -lullib -L$ngx_addon_dir/src/dna/lib2-64/others-ex/lib -lullib_ex -L$ngx_addon_dir/src/dna/lib2-64/dict/lib -luldict -lcrypt -lpthread"
+have=NGX_HTTP_HEADERS . auto/have

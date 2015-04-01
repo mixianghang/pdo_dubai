@@ -1,0 +1,311 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE Policy SYSTEM "policy.dtd">
+
+<!--DOCTYPE Policy-->
+<Policy>
+    <PatternDefine>
+
+        <IpDict define="WHITELIST_BAIDU">
+            <DictFile>${WS_HOME}/conf/white_ip_baidu</DictFile>
+            <DictMax>1000</DictMax>
+        </IpDict>
+
+        <IpDict define="WHITELIST_UCWEB">
+            <DictFile>${WS_HOME}/conf/white_ip_ucweb</DictFile>
+            <DictMax>1000</DictMax>
+        </IpDict>
+
+        <IpDict define="BLACKLIST">
+            <DictFile>${WS_HOME}/conf/black_ip</DictFile>
+            <DictMax>1000</DictMax>
+        </IpDict>
+
+        <DistributeReferAttack define="REFER_POLICY_1">
+            <PolicyTest>N</PolicyTest>
+            <BadUserNumThreshold>0</BadUserNumThreshold>
+            <BadUserTimePeriod>60</BadUserTimePeriod>
+            <CacheNum>500000</CacheNum>
+            <TimePeriod>10</TimePeriod>
+            <Threshold>4</Threshold>
+            <StatID>1</StatID>
+        </DistributeReferAttack>
+
+        <DistributeURIAttack define="URL_POLICY_1">
+            <PolicyTest>N</PolicyTest>
+            <BadUserNumThreshold>0</BadUserNumThreshold>
+            <BadUserTimePeriod>60</BadUserTimePeriod>
+            <CacheNum>500000</CacheNum>
+            <TimePeriod>10</TimePeriod>
+            <Threshold>50</Threshold>
+            <StatID>2</StatID>
+        </DistributeURIAttack>
+
+        <DistributeURIAttack define="URL_POLICY_2">
+            <PolicyTest>N</PolicyTest>
+            <BadUserNumThreshold>0</BadUserNumThreshold>
+            <BadUserTimePeriod>60</BadUserTimePeriod>
+            <CacheNum>500000</CacheNum>
+            <TimePeriod>10</TimePeriod>
+            <Threshold>35</Threshold>
+            <StatID>2</StatID>
+        </DistributeURIAttack>
+
+        <DistributeURIAttack define="URL_POLICY_3">
+            <PolicyTest>N</PolicyTest>
+            <BadUserNumThreshold>0</BadUserNumThreshold>
+            <BadUserTimePeriod>60</BadUserTimePeriod>
+            <CacheNum>500000</CacheNum>
+            <TimePeriod>10</TimePeriod>
+            <Threshold>25</Threshold>
+            <StatID>2</StatID>
+        </DistributeURIAttack>
+
+        <DistributeURIAttack define="URL_POLICY_4">
+            <PolicyTest>N</PolicyTest>
+            <BadUserNumThreshold>50</BadUserNumThreshold>
+            <BadUserTimePeriod>60</BadUserTimePeriod>
+            <CacheNum>500000</CacheNum>
+            <TimePeriod>60</TimePeriod>
+            <Threshold>90</Threshold>
+            <StatID>3</StatID>
+        </DistributeURIAttack>
+
+        <DistributeIpAttack define="IP_POLICY_1">
+            <PolicyTest>N</PolicyTest>
+            <BadUserNumThreshold>0</BadUserNumThreshold>
+            <BadUserTimePeriod>60</BadUserTimePeriod>
+            <CacheNum>500000</CacheNum>
+            <TimePeriod>10</TimePeriod>
+            <Threshold>30</Threshold>
+            <StatID>4</StatID>
+        </DistributeIpAttack>
+
+        <DistributeIpAttack define="IP_POLICY_2">
+            <PolicyTest>N</PolicyTest>
+            <BadUserNumThreshold>0</BadUserNumThreshold>
+            <BadUserTimePeriod>60</BadUserTimePeriod>
+            <CacheNum>500000</CacheNum>
+            <TimePeriod>10</TimePeriod>
+            <Threshold>9</Threshold>
+            <StatID>4</StatID>
+        </DistributeIpAttack>
+
+        <DistributeIpAttack define="IP_POLICY_3">
+            <PolicyTest>N</PolicyTest>
+            <BadUserNumThreshold>0</BadUserNumThreshold>
+            <BadUserTimePeriod>60</BadUserTimePeriod>
+            <CacheNum>500000</CacheNum>
+            <TimePeriod>10</TimePeriod>
+            <Threshold>6</Threshold>
+            <StatID>4</StatID>
+        </DistributeIpAttack>
+
+        <DistributeIpAttack define="IP_POLICY_4">
+            <PolicyTest>N</PolicyTest>
+            <BadUserNumThreshold>60</BadUserNumThreshold>
+            <BadUserTimePeriod>60</BadUserTimePeriod>
+            <CacheNum>500000</CacheNum>
+            <TimePeriod>60</TimePeriod>
+            <Threshold>10</Threshold>
+            <StatID>5</StatID>
+        </DistributeIpAttack>
+
+        <DistributeIpAttack define="IP_POLICY_5">
+            <PolicyTest>N</PolicyTest>
+            <BadUserNumThreshold>150</BadUserNumThreshold>
+            <BadUserTimePeriod>60</BadUserTimePeriod>
+            <CacheNum>500000</CacheNum>
+            <TimePeriod>60</TimePeriod>
+            <Threshold>35</Threshold>
+            <StatID>6</StatID>
+        </DistributeIpAttack>
+
+    </PatternDefine>
+
+    <ActionDefine/>
+
+    <Rule type="PRE" skip="1000">
+        <Pattern>
+            <AND>
+                <IpDict match="BLACKLIST"/>
+            </AND>
+        </Pattern>
+        <Action>
+            <ReturnCode Code="7"/>
+        </Action>
+    </Rule>
+
+    <Rule type="PRE" skip="1000">
+        <Pattern>
+            <AND>
+                <IpDict match="WHITELIST_BAIDU"/>
+            </AND>
+        </Pattern>
+        <Action>
+            <ReturnCode Code="1000"/>
+        </Action>
+    </Rule>
+
+    <Rule type="PRE" skip="1000">
+        <Pattern>
+            <AND>
+                <IpDict match="WHITELIST_UCWEB"/>
+            </AND>
+        </Pattern>
+        <Action>
+            <ReturnCode Code="1001"/>
+        </Action>
+    </Rule>
+
+    <Rule type="PRE" skip="100">
+        <Pattern>
+            <AND>
+                <HttpFilter>
+                    <HTTP_REFER notmatch="(^$)|(baidu\.com)|(hao123\.com)|(360\.cn)" />
+                </HttpFilter>
+                <DistributeReferAttack match="REFER_POLICY_1"/>
+            </AND>
+        </Pattern>
+        <Action>
+            <ReturnCode Code="9"/>
+        </Action>
+    </Rule>
+
+    <Rule type="PRE" skip="100">
+        <Pattern>
+            <AND>
+                <HttpFilter>
+                    <HTTP_URI match="^/tb/" />
+                </HttpFilter>
+            </AND>
+        </Pattern>
+        <Action>
+            <ReturnCode Code="1003"/>
+        </Action>
+    </Rule>
+
+    <Rule type="PRE" skip="100">
+        <Pattern>
+            <AND>
+                <HttpFilter>
+			<HTTP_URI match="(^/f/commit/)|(^/i/commit/)|(^/f$)|(^/$)|(^/favicon.ico)|(^/crossdomain.xml)" />
+		</HttpFilter>
+            </AND>
+        </Pattern>
+        <Action>
+            <ReturnCode Code="1004"/>
+        </Action>
+    </Rule>
+
+    <Rule type="PRE" skip="100">
+        <Pattern>
+            <AND>
+                <DistributeIpAttack match="IP_POLICY_1"/>
+            </AND>
+        </Pattern>
+        <Action>
+            <ReturnCode Code="8"/>
+        </Action>
+    </Rule>
+
+    <Rule type="PRE" skip="100">
+        <Pattern>
+            <AND>
+                <HttpFilter>
+                    <HTTP_COOKIE match="^$" />
+                </HttpFilter>
+                <DistributeURIAttack match="URL_POLICY_1"/>
+            </AND>
+        </Pattern>
+        <Action>
+            <ReturnCode Code="10"/>
+        </Action>
+    </Rule>
+
+    <Rule type="PRE" skip="100">
+        <Pattern>
+            <AND>
+                <HttpFilter>
+                    <HTTP_COOKIE notmatch="^$" />
+                </HttpFilter>
+                <DistributeURIAttack match="URL_POLICY_1"/>
+                <DistributeIpAttack match="IP_POLICY_3"/>
+            </AND>
+        </Pattern>
+        <Action>
+            <ReturnCode Code="11"/>
+        </Action>
+    </Rule>
+
+
+    <Rule type="PRE" skip="100">
+        <Pattern>
+            <AND>
+                <HttpFilter>
+                    <HTTP_COOKIE match="^$" />
+                </HttpFilter>
+                <DistributeURIAttack match="URL_POLICY_3"/>
+                <DistributeIpAttack match="IP_POLICY_2"/>
+            </AND>
+        </Pattern>
+        <Action>
+            <ReturnCode Code="12"/>
+        </Action>
+    </Rule>
+
+    <Rule type="PRE" skip="100">
+        <Pattern>
+            <AND>
+                <HttpFilter>
+                    <HTTP_COOKIE notmatch="^$" />
+                </HttpFilter>
+                <DistributeURIAttack match="URL_POLICY_2"/>
+                <DistributeIpAttack match="IP_POLICY_2"/>
+            </AND>
+        </Pattern>
+        <Action>
+            <ReturnCode Code="13"/>
+        </Action>
+    </Rule>
+
+    <Rule type="PRE" skip="100">
+        <Pattern>
+            <AND>
+                <HttpFilter>
+                    <HTTP_COOKIE match="^$" />
+                </HttpFilter>
+                <DistributeIpAttack match="IP_POLICY_4"/>
+            </AND>
+        </Pattern>
+        <Action>
+            <ReturnCode Code="14"/>
+        </Action>
+    </Rule>
+
+    <Rule type="PRE" skip="100">
+        <Pattern>
+            <AND>
+                <HttpFilter>
+                    <HTTP_COOKIE notmatch="^$" />
+                </HttpFilter>
+                <DistributeIpAttack match="IP_POLICY_5"/>
+            </AND>
+        </Pattern>
+        <Action>
+            <ReturnCode Code="15"/>
+        </Action>
+    </Rule>
+
+
+    <Rule type="PRE" skip="100">
+        <Pattern>
+            <AND>
+                <DistributeURIAttack match="URL_POLICY_4"/>
+            </AND>
+        </Pattern>
+        <Action>
+            <ReturnCode Code="16"/>
+        </Action>
+    </Rule>
+
+</Policy>

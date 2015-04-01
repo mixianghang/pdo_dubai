@@ -1,0 +1,4 @@
+基于nginx小组提供的public/nginx 1.0.13.2版本制作jumbo安装包
+并在inf/odp/webserver/nginx 路径下维护ODP安装时需要的配置文
+件
+nginx外部实际版本为1.2.4

@@ -1,0 +1,104 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.5.4	//
+NGX_HTTP_BAIDU_USERTRACK_COOKIE_DEC_LEN	src/ngx_http_baidu_usertrack_module.c	33;"	d	file:
+NGX_HTTP_BAIDU_USERTRACK_COOKIE_DES_LEN	src/ngx_http_baidu_usertrack_module.c	32;"	d	file:
+NGX_HTTP_BAIDU_USERTRACK_COOKIE_FAIL	src/ngx_http_baidu_usertrack_module.c	30;"	d	file:
+NGX_HTTP_BAIDU_USERTRACK_COOKIE_LEN_MIN	src/ngx_http_baidu_usertrack_module.c	31;"	d	file:
+NGX_HTTP_BAIDU_USERTRACK_COOKIE_PASS	src/ngx_http_baidu_usertrack_module.c	29;"	d	file:
+NGX_HTTP_BAIDU_USERTRACK_MAX_EXPIRES	src/ngx_http_baidu_usertrack_module.c	35;"	d	file:
+NGX_HTTP_BAIDU_USERTRACK_OFF	src/ngx_http_baidu_usertrack_module.c	27;"	d	file:
+NGX_HTTP_BAIDU_USERTRACK_ON	src/ngx_http_baidu_usertrack_module.c	28;"	d	file:
+NGX_HTTP_USERID_LOG	src/ngx_http_userid_filter_module.c	13;"	d	file:
+NGX_HTTP_USERID_MAX_EXPIRES	src/ngx_http_userid_filter_module.c	18;"	d	file:
+NGX_HTTP_USERID_OFF	src/ngx_http_userid_filter_module.c	12;"	d	file:
+NGX_HTTP_USERID_ON	src/ngx_http_userid_filter_module.c	15;"	d	file:
+NGX_HTTP_USERID_V1	src/ngx_http_userid_filter_module.c	14;"	d	file:
+__HEAD_USERTRACK_DES_	src/baidu_des.h	2;"	d
+ascTObcd	src/baidu_des.c	/^int ascTObcd(char *asc, int asclen, unsigned char *bcd, int bcdlen)$/;"	f
+atb	src/baidu_des.c	/^inline static int atb(char asc)$/;"	f	file:
+baidu_usertrack_default_expires	src/ngx_http_baidu_usertrack_module.c	/^static u_char baidu_usertrack_default_expires[] = "; expires=Thu, 31-Dec-37 23:55:55 GMT";$/;"	v	file:
+bcdTOasc	src/baidu_des.c	/^int bcdTOasc(unsigned char *bcd, int bcdlen, char *asc, int asclen)$/;"	f
+bta	src/baidu_des.c	/^inline static char bta(int asc)$/;"	f	file:
+check_pass	src/ngx_http_baidu_usertrack_module.c	/^    ngx_uint_t          check_pass; \/* 0 : no cookie or not pass, 1 : pass  *\/$/;"	m	file:
+checksum	src/baidu_des.c	/^unsigned short checksum(char *data, unsigned short length) $/;"	f
+cookie	src/ngx_http_baidu_usertrack_module.c	/^    ngx_str_t           cookie;     \/* cookie value of BAIDUUID **\/$/;"	m	file:
+cookie	src/ngx_http_userid_filter_module.c	/^    ngx_str_t   cookie;$/;"	m	file:
+desdecrypt	src/baidu_des.c	/^int desdecrypt(char *szDecrypt, int nBufferLen, char *pencryptStr, int encryptLen, des_key_schedule *szKeySchedule)$/;"	f
+desencrypt	src/baidu_des.c	/^int desencrypt(char *szEncrypt, int nBufferLen, char *src, int srcLen, des_key_schedule *szKeySchedule)$/;"	f
+dks	src/ngx_http_baidu_usertrack_module.c	/^    des_key_schedule    dks;$/;"	m	file:
+domain	src/ngx_http_baidu_usertrack_module.c	/^    ngx_str_t   domain;  \/* default .baidu.com*\/$/;"	m	file:
+domain	src/ngx_http_userid_filter_module.c	/^    ngx_str_t   domain;$/;"	m	file:
+enable	src/ngx_http_baidu_usertrack_module.c	/^    ngx_uint_t  enable;  \/* on | off :  0|1**\/$/;"	m	file:
+enable	src/ngx_http_userid_filter_module.c	/^    ngx_uint_t  enable;$/;"	m	file:
+expires	src/ngx_http_baidu_usertrack_module.c	/^    time_t      expires; \/* default 1 year*\/$/;"	m	file:
+expires	src/ngx_http_userid_filter_module.c	/^    time_t      expires;$/;"	m	file:
+expires	src/ngx_http_userid_filter_module.c	/^static u_char expires[] = "; expires=Thu, 31-Dec-37 23:55:55 GMT";$/;"	v	file:
+initKeySchedule	src/baidu_des.c	/^void initKeySchedule(des_key_schedule *szKeySchedule, char *keyStr)$/;"	f
+key	src/ngx_http_baidu_usertrack_module.c	/^    ngx_str_t   key;     \/* default ''*\/$/;"	m	file:
+mark	src/ngx_http_userid_filter_module.c	/^    u_char      mark;$/;"	m	file:
+name	src/ngx_http_baidu_usertrack_module.c	/^    ngx_str_t   name;    \/* default BAIDUID*\/$/;"	m	file:
+name	src/ngx_http_userid_filter_module.c	/^    ngx_str_t   name;$/;"	m	file:
+ngx_http_baidu_usertrack_commands	src/ngx_http_baidu_usertrack_module.c	/^static ngx_command_t ngx_http_baidu_usertrack_commands[] = {$/;"	v	file:
+ngx_http_baidu_usertrack_conf_t	src/ngx_http_baidu_usertrack_module.c	/^}ngx_http_baidu_usertrack_conf_t;$/;"	t	file:
+ngx_http_baidu_usertrack_create_conf	src/ngx_http_baidu_usertrack_module.c	/^static void * ngx_http_baidu_usertrack_create_conf(ngx_conf_t *cf)$/;"	f	file:
+ngx_http_baidu_usertrack_ctx_t	src/ngx_http_baidu_usertrack_module.c	/^}ngx_http_baidu_usertrack_ctx_t;$/;"	t	file:
+ngx_http_baidu_usertrack_domain	src/ngx_http_baidu_usertrack_module.c	/^static char * ngx_http_baidu_usertrack_domain(ngx_conf_t *cf, void *post, void *data)$/;"	f	file:
+ngx_http_baidu_usertrack_domain_p	src/ngx_http_baidu_usertrack_module.c	/^static ngx_conf_post_handler_pt ngx_http_baidu_usertrack_domain_p = $/;"	v	file:
+ngx_http_baidu_usertrack_expires	src/ngx_http_baidu_usertrack_module.c	/^ngx_http_baidu_usertrack_expires(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)$/;"	f	file:
+ngx_http_baidu_usertrack_filter	src/ngx_http_baidu_usertrack_module.c	/^static ngx_int_t ngx_http_baidu_usertrack_filter(ngx_http_request_t *r)$/;"	f	file:
+ngx_http_baidu_usertrack_get_and_check	src/ngx_http_baidu_usertrack_module.c	/^ngx_http_baidu_usertrack_get_and_check(ngx_http_request_t *r, $/;"	f	file:
+ngx_http_baidu_usertrack_init	src/ngx_http_baidu_usertrack_module.c	/^static ngx_int_t ngx_http_baidu_usertrack_init(ngx_conf_t *cf)$/;"	f	file:
+ngx_http_baidu_usertrack_init_worker	src/ngx_http_baidu_usertrack_module.c	/^static ngx_int_t ngx_http_baidu_usertrack_init_worker(ngx_cycle_t *cycle)$/;"	f	file:
+ngx_http_baidu_usertrack_merge_conf	src/ngx_http_baidu_usertrack_module.c	/^static char * ngx_http_baidu_usertrack_merge_conf(ngx_conf_t *cf, void *parent, void *child)$/;"	f	file:
+ngx_http_baidu_usertrack_module	src/ngx_http_baidu_usertrack_module.c	/^ngx_module_t  ngx_http_baidu_usertrack_module = {$/;"	v
+ngx_http_baidu_usertrack_module_ctx	src/ngx_http_baidu_usertrack_module.c	/^static ngx_http_module_t  ngx_http_baidu_usertrack_module_ctx = {$/;"	v	file:
+ngx_http_baidu_usertrack_p3pcp	src/ngx_http_baidu_usertrack_module.c	/^static char * ngx_http_baidu_usertrack_p3pcp(ngx_conf_t *cf, void *post, void *data)$/;"	f	file:
+ngx_http_baidu_usertrack_p3pcp_p	src/ngx_http_baidu_usertrack_module.c	/^static ngx_conf_post_handler_pt ngx_http_baidu_usertrack_p3pcp_p = $/;"	v	file:
+ngx_http_baidu_usertrack_path	src/ngx_http_baidu_usertrack_module.c	/^static char * ngx_http_baidu_usertrack_path(ngx_conf_t *cf, void *post, void *data)$/;"	f	file:
+ngx_http_baidu_usertrack_path_p	src/ngx_http_baidu_usertrack_module.c	/^static ngx_conf_post_handler_pt ngx_http_baidu_usertrack_path_p = $/;"	v	file:
+ngx_http_baidu_usertrack_set	src/ngx_http_baidu_usertrack_module.c	/^static ngx_int_t ngx_http_baidu_usertrack_set(ngx_http_request_t *r,$/;"	f	file:
+ngx_http_baidu_usertrack_state	src/ngx_http_baidu_usertrack_module.c	/^static ngx_conf_enum_t ngx_http_baidu_usertrack_state[] = {$/;"	v	file:
+ngx_http_next_header_filter	src/ngx_http_baidu_usertrack_module.c	/^static ngx_http_output_header_filter_pt  ngx_http_next_header_filter;$/;"	v	file:
+ngx_http_next_header_filter	src/ngx_http_userid_filter_module.c	/^static ngx_http_output_header_filter_pt  ngx_http_next_header_filter;$/;"	v	file:
+ngx_http_userid_add_variables	src/ngx_http_userid_filter_module.c	/^ngx_http_userid_add_variables(ngx_conf_t *cf)$/;"	f	file:
+ngx_http_userid_commands	src/ngx_http_userid_filter_module.c	/^static ngx_command_t  ngx_http_userid_commands[] = {$/;"	v	file:
+ngx_http_userid_conf_t	src/ngx_http_userid_filter_module.c	/^} ngx_http_userid_conf_t;$/;"	t	file:
+ngx_http_userid_create_conf	src/ngx_http_userid_filter_module.c	/^ngx_http_userid_create_conf(ngx_conf_t *cf)$/;"	f	file:
+ngx_http_userid_create_uid	src/ngx_http_userid_filter_module.c	/^ngx_http_userid_create_uid(ngx_http_request_t *r, ngx_http_userid_ctx_t *ctx,$/;"	f	file:
+ngx_http_userid_ctx_t	src/ngx_http_userid_filter_module.c	/^} ngx_http_userid_ctx_t;$/;"	t	file:
+ngx_http_userid_domain	src/ngx_http_userid_filter_module.c	/^ngx_http_userid_domain(ngx_conf_t *cf, void *post, void *data)$/;"	f	file:
+ngx_http_userid_domain_p	src/ngx_http_userid_filter_module.c	/^static ngx_conf_post_handler_pt  ngx_http_userid_domain_p =$/;"	v	file:
+ngx_http_userid_expires	src/ngx_http_userid_filter_module.c	/^ngx_http_userid_expires(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)$/;"	f	file:
+ngx_http_userid_filter	src/ngx_http_userid_filter_module.c	/^ngx_http_userid_filter(ngx_http_request_t *r)$/;"	f	file:
+ngx_http_userid_filter_module	src/ngx_http_userid_filter_module.c	/^ngx_module_t  ngx_http_userid_filter_module = {$/;"	v
+ngx_http_userid_filter_module_ctx	src/ngx_http_userid_filter_module.c	/^static ngx_http_module_t  ngx_http_userid_filter_module_ctx = {$/;"	v	file:
+ngx_http_userid_get_uid	src/ngx_http_userid_filter_module.c	/^ngx_http_userid_get_uid(ngx_http_request_t *r, ngx_http_userid_conf_t *conf)$/;"	f	file:
+ngx_http_userid_got	src/ngx_http_userid_filter_module.c	/^static ngx_str_t  ngx_http_userid_got = ngx_string("uid_got");$/;"	v	file:
+ngx_http_userid_got_variable	src/ngx_http_userid_filter_module.c	/^ngx_http_userid_got_variable(ngx_http_request_t *r,$/;"	f	file:
+ngx_http_userid_init	src/ngx_http_userid_filter_module.c	/^ngx_http_userid_init(ngx_conf_t *cf)$/;"	f	file:
+ngx_http_userid_init_worker	src/ngx_http_userid_filter_module.c	/^ngx_http_userid_init_worker(ngx_cycle_t *cycle)$/;"	f	file:
+ngx_http_userid_mark	src/ngx_http_userid_filter_module.c	/^ngx_http_userid_mark(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)$/;"	f	file:
+ngx_http_userid_merge_conf	src/ngx_http_userid_filter_module.c	/^ngx_http_userid_merge_conf(ngx_conf_t *cf, void *parent, void *child)$/;"	f	file:
+ngx_http_userid_p3p	src/ngx_http_userid_filter_module.c	/^ngx_http_userid_p3p(ngx_conf_t *cf, void *post, void *data)$/;"	f	file:
+ngx_http_userid_p3p_p	src/ngx_http_userid_filter_module.c	/^static ngx_conf_post_handler_pt  ngx_http_userid_p3p_p = ngx_http_userid_p3p;$/;"	v	file:
+ngx_http_userid_path	src/ngx_http_userid_filter_module.c	/^ngx_http_userid_path(ngx_conf_t *cf, void *post, void *data)$/;"	f	file:
+ngx_http_userid_path_p	src/ngx_http_userid_filter_module.c	/^static ngx_conf_post_handler_pt  ngx_http_userid_path_p = ngx_http_userid_path;$/;"	v	file:
+ngx_http_userid_set	src/ngx_http_userid_filter_module.c	/^static ngx_str_t  ngx_http_userid_set = ngx_string("uid_set");$/;"	v	file:
+ngx_http_userid_set_uid	src/ngx_http_userid_filter_module.c	/^ngx_http_userid_set_uid(ngx_http_request_t *r, ngx_http_userid_ctx_t *ctx,$/;"	f	file:
+ngx_http_userid_set_variable	src/ngx_http_userid_filter_module.c	/^ngx_http_userid_set_variable(ngx_http_request_t *r,$/;"	f	file:
+ngx_http_userid_state	src/ngx_http_userid_filter_module.c	/^static ngx_conf_enum_t  ngx_http_userid_state[] = {$/;"	v	file:
+ngx_http_userid_variable	src/ngx_http_userid_filter_module.c	/^ngx_http_userid_variable(ngx_http_request_t *r, ngx_http_variable_value_t *v,$/;"	f	file:
+p3p	src/ngx_http_userid_filter_module.c	/^    ngx_str_t   p3p;$/;"	m	file:
+p3pcp	src/ngx_http_baidu_usertrack_module.c	/^    ngx_str_t   p3pcp;   \/* p3p content*\/$/;"	m	file:
+path	src/ngx_http_baidu_usertrack_module.c	/^    ngx_str_t   path;     \/* default \/ *\/$/;"	m	file:
+path	src/ngx_http_userid_filter_module.c	/^    ngx_str_t   path;$/;"	m	file:
+sequencer_v1	src/ngx_http_userid_filter_module.c	/^static uint32_t  sequencer_v1 = 1;$/;"	v	file:
+sequencer_v2	src/ngx_http_userid_filter_module.c	/^static uint32_t  sequencer_v2 = 0x03030302;$/;"	v	file:
+service	src/ngx_http_userid_filter_module.c	/^    ngx_int_t   service;$/;"	m	file:
+start_value	src/ngx_http_userid_filter_module.c	/^static uint32_t  start_value;$/;"	v	file:
+uid_got	src/ngx_http_userid_filter_module.c	/^    uint32_t    uid_got[4];$/;"	m	file:
+uid_set	src/ngx_http_userid_filter_module.c	/^    uint32_t    uid_set[4];$/;"	m	file:
