@@ -1,2 +1,2 @@
 # pdo_dubai
-knowledge from baidu
+knowledge from dubai
